@@ -7,6 +7,8 @@
 #include "BaseMonster.h"
 #include "SoundManager.h"
 
+using namespace kr;
+
 USING_NS_CC;
 
 typedef enum{
@@ -42,7 +44,7 @@ public:
    virtual void removeTower();
    virtual bool init();
    CC_SYNTHESIZE(TowerType, towerType, TowerType); 
-   CC_SYNTHESIZE(Terrain*, myTerrain, MyTerrain); 
+    CC_SYNTHESIZE(kr::Terrain*, myTerrain, MyTerrain);
    CC_SYNTHESIZE(std::string, towerName, TowerName); 
    CC_SYNTHESIZE(int, level, Level);
    CC_SYNTHESIZE(float, scope, Scope);

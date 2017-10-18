@@ -1,7 +1,7 @@
 #include "MechsTower.h"
 #include "SimplePanleLayerWithFlag.h"
 #include "BaseMap.h"
-
+using namespace kr;
 bool MechsTower::init()
 {
 	if(!BaseTower::init()){
@@ -76,8 +76,8 @@ void MechsTower::sellTower()
 		mecha->unscheduleAllCallbacks();
 		mecha->removeFromParent();
 	}
-	static_cast<Terrain*>(this->getParent())->smokeEffect();
-	static_cast<Terrain*>(this->getParent())->terrain->setVisible(true);
+    static_cast<kr::Terrain*>(this->getParent())->smokeEffect();
+    static_cast<kr::Terrain*>(this->getParent())->terrain->setVisible(true);
 	this->unscheduleAllCallbacks();
 	this->removeAllChildren();
 	this->removeFromParent();

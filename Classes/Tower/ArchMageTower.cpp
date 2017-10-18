@@ -6,6 +6,8 @@
 #include "Twister.h"
 #include "SimplePanleLayer.h"
 
+using namespace kr;
+
 void ArchMageTower::sellTower()
 {
 	for(int i=0;i<3;i++)
@@ -15,7 +17,7 @@ void ArchMageTower::sellTower()
 			DelayBullet[i]->removeFromParent();
 		}
 	}
-	static_cast<Terrain*>(this->getParent())->terrain->setVisible(true);
+	static_cast<kr::Terrain*>(this->getParent())->terrain->setVisible(true);
 	this->removeFromParent();
 }
 

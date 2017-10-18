@@ -4,6 +4,8 @@
 #include "BaseMap.h"
 #include "GameManager.h"
 
+using namespace kr;
+
 BaseTower::BaseTower()
 :isUpdateMenuShown(false)
 {}
@@ -54,14 +56,14 @@ void BaseTower::showTowerInfo()
 
 void BaseTower::sellTower()
 {
-	static_cast<Terrain*>(this->getParent())->terrain->setVisible(true);
+	static_cast<kr::Terrain*>(this->getParent())->terrain->setVisible(true);
 	removeTower();
 }
 
 void BaseTower::removeTower()
 {
 	static_cast<BaseMap*>(this->getParent()->getParent())->playerState->removeTowerInfo();
-	static_cast<Terrain*>(this->getParent())->smokeEffect();
+	static_cast<kr::Terrain*>(this->getParent())->smokeEffect();
 	this->unscheduleAllCallbacks();
 	this->removeAllChildren();
 	this->removeFromParent();

@@ -6,6 +6,8 @@
 #include "Terrain.h"
 #include "BaseBuildIcon.h"
 
+using namespace kr;
+
 USING_NS_CC; 
 
 class TowerPanleLayer: public Sprite
@@ -16,7 +18,7 @@ public:
     // 重载触摸回调函数
     bool onTouchBegan(Touch *touch, Event *event);
     void onTouchEnded(Touch* touch, Event* event);
-    CC_SYNTHESIZE(Terrain*, terrain, MyTerrain); 
+    CC_SYNTHESIZE(kr::Terrain*, terrain, MyTerrain);
 	void inAnimation();
 private:    
 	void addIcons();
